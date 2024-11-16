@@ -1,6 +1,6 @@
 import User from '../models/user.model.js';
 import bcrypt from 'bcryptjs';
-import gentoken from '../utils/jwt.js'; // Ensure this function is correctly defined and imported
+import gentoken from '../utils/jwt.js';
 
 export const signup = async (req, res) => {
     try {
