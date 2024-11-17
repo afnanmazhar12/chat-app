@@ -30,6 +30,10 @@ app.use(cors({
   allowedHeaders: ['Content-Type', 'Authorization'],
 }));
 
+
+app.use(cors({ origin: 'https://chat-app42.netlify.app' }));
+
+
 app.get('/home', (req, res) => {
   res.send('Hello, World!');
 });
