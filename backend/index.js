@@ -19,13 +19,14 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json());
 app.use(cookieParser());
 
+
 app.use(cors({
   origin: [
-    'https://chat-app-3-0zzu.onrender.com', // Previous frontend origin
-    'https://chat-app42.netlify.app' // New frontend origin
+    'https://chat-app-3-0zzu.onrender.com',
+    'https://chat-app42.netlify.app',
   ],
   methods: ['GET', 'POST'],
-  credentials: true, // If sending cookies
+  credentials: true, // Allow sending cookies
   allowedHeaders: ['Content-Type', 'Authorization'],
 }));
 

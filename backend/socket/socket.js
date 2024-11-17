@@ -6,10 +6,11 @@ const app = express();
 
 const server = http.createServer(app);
 const io = new Server(server, {
-	cors: {
-		origin: ["https://chat-app-7-vj9g.onrender.com/"],
-		methods: ["GET", "POST"],
-	},
+  cors: {
+    origin: ["https://chat-app-7-vj9g.onrender.com"], // Ensure no trailing slash
+    methods: ["GET", "POST"],
+    credentials: true, // Allow cookies if needed
+  },
 });
 
 export const getReceiverSocketId = (receiverId) => {
