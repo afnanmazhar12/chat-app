@@ -1,6 +1,6 @@
 import express from "express";
 import dotenv from "dotenv";
-const cors = require('cors');
+import cors from 'cors';
 
 import cookieParser from "cookie-parser";
 import path from 'path'; // Correct import for the path module
