@@ -20,11 +20,14 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.use(cors({
-  origin: 'https://chat-app-3-0zzu.onrender.com/', // Replace with the origin of your frontend
-  methods: ['GET', 'POST'], // Allowed HTTP methods
-  allowedHeaders: ['Content-Type', 'Authorization'], // Allowed headers
+  origin: [
+    'https://chat-app-3-0zzu.onrender.com', // Previous frontend origin
+    'https://chat-app42.netlify.app' // New frontend origin
+  ],
+  methods: ['GET', 'POST'],
+  credentials: true, // If sending cookies
+  allowedHeaders: ['Content-Type', 'Authorization'],
 }));
-
 
 app.get('/home', (req, res) => {
   res.send('Hello, World!');
