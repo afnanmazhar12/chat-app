@@ -35,11 +35,14 @@ app.use('/api/auth', authRoutes);
 app.use('/api/messages', messageRoutes);
 app.use('/api/users', userRoutes);
 
-app.use(express.static(path.join(__dirname, "frontend", "dist"))); // Fixed path
 
+app.use(express.static(path.join(__dirname, "frontend", "dist"))); 
+
+// Catch-all route for SPA
 app.get("*", (req, res) => {
   res.sendFile(path.resolve(__dirname, "frontend", "dist", "index.html"));
 });
+
 
 // Start the server
 server.listen(PORT, () => {
