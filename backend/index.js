@@ -40,7 +40,7 @@ app.use(express.static(path.join(__dirname, "frontend", "dist")));
 
 // Catch-all route for SPA
 app.get("*", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "frontend", "dist", "index.html"));
+  res.sendFile(path.find(__dirname, "frontend", "dist", "index.html"));
 });
 
 
