@@ -25,10 +25,11 @@ app.use(cors({
     'https://chat-app-7-vj9g.onrender.com',
     'https://chat-app42.netlify.app',
   ],
-  methods: ['GET', 'POST'],
-  credentials: true, // Allow sending cookies
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // Allow all HTTP methods
+  credentials: true, // Allow cookies
   allowedHeaders: ['Content-Type', 'Authorization'],
 }));
+
 
 // Routes
 app.get('/home', (req, res) => {
