@@ -18,7 +18,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 
-app.get('/', (req, res) => {
+app.get('/home', (req, res) => {
   res.send('Hello, World!');
 });
 
@@ -30,7 +30,7 @@ app.use('/api/users', userRoutes);
 app.use(express.static(path.join(__dirname, "frontend", "dist"))); // Fixed path
 
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "frontend", "dist", "index.html"));
+  res.sendFile(path.resolve(__dirname, "frontend", "dist", "index.html"));
 });
 
 // Start the server
