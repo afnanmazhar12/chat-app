@@ -22,7 +22,7 @@ app.use(cookieParser());
 // CORS setup
 app.use(cors({
   origin: [
-    'https://chat-app-3-0zzu.onrender.com',
+    'https://chat-app-7-vj9g.onrender.com',
     'https://chat-app42.netlify.app',
   ],
   methods: ['GET', 'POST'],
