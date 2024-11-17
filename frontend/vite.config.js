@@ -8,7 +8,9 @@ export default defineConfig({
     port: 3000,
     proxy: {
       "/api": {
-        target: "https://chat-app-3-0zzu.onrender.com", // Backend server origin
+        target: "https://chat-app-7-vj9g.onrender.com/",
+                
+         // Backend server origin
         changeOrigin: true, // Enables proxying requests to the target
         secure: false, // Set to true if the backend uses HTTPS and you want stricter verification
       },
