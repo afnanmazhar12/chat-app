@@ -9,12 +9,12 @@ import { SocketContextProvider } from './context/SocketContext.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
 
-<AuthContextProvider>
+{/* <AuthContextProvider> */}
   <SocketContextProvider>
     <App />
     
   </SocketContextProvider>
  
-</AuthContextProvider>
+{/* </AuthContextProvider> */}
   </StrictMode>,
 )
